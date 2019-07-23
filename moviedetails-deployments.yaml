@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moviedetails
+  namespace: dev
+spec:
+  # minReadySeconds: 30
+  selector:
+    matchLabels:
+      app: moviedetails
+      environment: dev
+  replicas: 2
+  template: # template for the pods
+    metadata:
+      labels:
+        app: moviedetails
+        environment: dev
+    spec:
+      containers:
+      - name: moviedetails
+        image: gcr.io/spring-kube/movie-details
