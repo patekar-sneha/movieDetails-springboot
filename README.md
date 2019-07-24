@@ -6,7 +6,7 @@ docker build -t movie-details .
 
 gcloud auth: gcloud auth configure-docker
 
-DOCKER GOOGLE CLOUD: docker tag movie-review gcr.io/spring-kube/movie-details
+DOCKER GOOGLE CLOUD: docker tag movie-movie-details gcr.io/spring-kube/movie-details
 
 DOCKER PUSH TO GOOGLE CLOUD: docker push gcr.io/spring-kube/movie-details
 
